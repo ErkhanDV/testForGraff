@@ -1,12 +1,8 @@
 import "./App.scss";
+import AppRouter from "./router/AppRouter";
 
 const App = () => {
-  return (
-    <div className="App">
-      <ul className="product-list"></ul>
-      <div className="pagination-container"></div>
-    </div>
-  );
+  return <AppRouter />;
 };
 
 export default App;
