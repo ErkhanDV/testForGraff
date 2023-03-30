@@ -1,8 +1,12 @@
+import FiltersBlock from "./components/FiltersBlock/FilterBlock";
+import ProductList from "./components/ProductList/ProductList";
+
 const Home = () => {
   return (
-    <nav className="product-list">
-      <ul className="products"></ul>
-    </nav>
+    <>
+      <FiltersBlock />
+      <ProductList />
+    </>
   );
 };
 

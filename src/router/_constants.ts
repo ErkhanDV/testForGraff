@@ -1,4 +1,4 @@
 export enum ROUTE {
   home = "/",
-  product = "/product/product:id",
+  product = "/products/:id",
 }
