@@ -6,7 +6,8 @@ import BrandsFilter from "../BrandOption/BrandOption";
 import CategoriesSelect from "../CategoriesSelect/CategoriesSelect";
 
 const FiltersBlock = () => {
-  const { searchTitle, setSearchTitle } = useFilter();
+  const { searchTitle, searchBrand, setSearchBrand, setSearchTitle } =
+    useFilter();
 
   return (
     <div className="filters">
@@ -22,6 +23,19 @@ const FiltersBlock = () => {
       <div className="brands-filter_container">
         <fieldset>
           Choose a brand:
+          <div className="brand-option">
+            <input
+              type="radio"
+              id="any"
+              name="brands"
+              value=""
+              onChange={(event) =>
+                setSearchBrand(event.target.value.toLowerCase())
+              }
+              checked={!searchBrand}
+            />
+            <label htmlFor="any">Any</label>
+          </div>
           {BRANDS.map((brand, index) => (
             <BrandsFilter brand={brand} key={index} />
           ))}
