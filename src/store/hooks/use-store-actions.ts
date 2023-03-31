@@ -7,7 +7,9 @@ import { TProduct } from "../reducers/types";
 export const useProductList = () => {
   const dispatch = useAppDispatch();
 
-  const productList = useAppSelector((state) => state.ProductsSlice.products);
+  const productList = useAppSelector(
+    (state) => state.productListSlice.products
+  );
 
   const setProductList = (productList: TProduct[]) => {
     dispatch(productStoreSlice.updateProductList(productList));

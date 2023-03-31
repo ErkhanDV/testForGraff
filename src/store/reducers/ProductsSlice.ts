@@ -6,8 +6,8 @@ const initialState: IProductsStore = {
   products: [],
 };
 
-const productStoreSlice = createSlice({
-  name: "productStore",
+const productListSlice = createSlice({
+  name: "products",
   initialState,
   reducers: {
     updateProductList(state, action: PayloadAction<TProduct[]>) {
@@ -16,6 +16,6 @@ const productStoreSlice = createSlice({
   },
 });
 
-export const { updateProductList } = productStoreSlice.actions;
+export const { updateProductList } = productListSlice.actions;
 
-export default productStoreSlice.reducer;
+export default productListSlice.reducer;
