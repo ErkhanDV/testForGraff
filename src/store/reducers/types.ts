@@ -1,6 +1,14 @@
 export type TProduct = {
-  name: string;
-  amount: number;
+  id: number;
+  title: string;
+  description: string;
+  price: number;
+  rating: number;
+  stock: string;
+  brand: string;
+  category: string;
+  thumbnail: string;
+  images: string[];
 };
 
 export interface IProductsStore {

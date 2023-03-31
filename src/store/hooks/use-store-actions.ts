@@ -4,17 +4,17 @@ import * as productStoreSlice from "../reducers/ProductsSlice";
 
 import { TProduct } from "../reducers/types";
 
-export const useStore = () => {
+export const useProductList = () => {
   const dispatch = useAppDispatch();
 
-  const getProductList = useAppSelector((state) => state.ProductsSlice);
+  const productList = useAppSelector((state) => state.ProductsSlice.products);
 
-  const updateProductList = (productList: TProduct[]) => {
+  const setProductList = (productList: TProduct[]) => {
     dispatch(productStoreSlice.updateProductList(productList));
   };
 
   return {
-    getProductList,
-    updateProductList,
+    productList,
+    setProductList,
   };
 };
