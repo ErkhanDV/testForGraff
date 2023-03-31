@@ -1,5 +1,9 @@
 import { useFilter } from "../../../../store/hooks/use-filter-actions";
 
+import { BRANDS } from "../../_constants";
+
+import BrandsFilter from "../BrandOption/BrandOption";
+
 const FiltersBlock = () => {
   const { searchTitle, setSearchTitle } = useFilter();
 
@@ -13,6 +17,14 @@ const FiltersBlock = () => {
           defaultValue={searchTitle}
           onChange={(event) => setSearchTitle(event.target.value.toLowerCase())}
         />
+      </div>
+      <div className="brands-filter_container">
+        <fieldset>
+          Choose a brand:
+          {BRANDS.map((brand, index) => (
+            <BrandsFilter brand={brand} key={index} />
+          ))}
+        </fieldset>
       </div>
     </div>
   );

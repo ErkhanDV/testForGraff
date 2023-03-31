@@ -1,4 +1,4 @@
-import FiltersBlock from "./components/FiltersBlock/FilterBlock";
+import FiltersBlock from "./components/FiltersBlock/FiltersBlock";
 import ProductList from "./components/ProductList/ProductList";
 
 const Home = () => {
