@@ -3,6 +3,7 @@ import { useFilter } from "../../../../store/hooks/use-filter-actions";
 import { BRANDS } from "../../_constants";
 
 import BrandsFilter from "../BrandOption/BrandOption";
+import CategoriesSelect from "../CategoriesSelect/CategoriesSelect";
 
 const FiltersBlock = () => {
   const { searchTitle, setSearchTitle } = useFilter();
@@ -26,6 +27,7 @@ const FiltersBlock = () => {
           ))}
         </fieldset>
       </div>
+      <CategoriesSelect />
     </div>
   );
 };
