@@ -1,3 +1,4 @@
-import ProductsSlice from "./ProductsSlice";
+import productListSlice from "./ProductsSlice";
+import filterSlice from "./FilterSlice";
 
-export { ProductsSlice };
+export { productListSlice, filterSlice };

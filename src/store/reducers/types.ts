@@ -14,3 +14,9 @@ export type TProduct = {
 export interface IProductsStore {
   products: TProduct[];
 }
+
+export interface IFilter {
+  title: string;
+  category: string[];
+  brand: string;
+}
