@@ -11,13 +11,6 @@ export type TProduct = {
   images: string[];
 };
 
-export interface IProducts {
-  limit: number;
-  products: TProduct[];
-  skip: number;
-  total: number;
-}
-
 export interface IProductsStore {
   products: TProduct[];
 }

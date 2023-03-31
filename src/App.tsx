@@ -6,7 +6,7 @@ import AppRouter from "./router/AppRouter";
 
 import { PRODUCTS_LIST } from "./pages/Home/_constants";
 
-import { IProducts } from "./store/reducers/types";
+import { IProducts } from "./types/types";
 
 import "./App.scss";
 
@@ -20,6 +20,7 @@ const App = () => {
       setProductList(products.products);
     })();
   }, []);
+
   return <AppRouter />;
 };
 
