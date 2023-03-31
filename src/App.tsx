@@ -24,7 +24,7 @@ const App = () => {
       setProductList(
         productList.filter(
           (product) =>
-            product.title.toLowerCase().includes(searchTitle) &&
+            product.title.toLowerCase().includes(searchTitle.toLowerCase()) &&
             searchCategory.every((category) =>
               product.category.toLowerCase().includes(category)
             ) &&

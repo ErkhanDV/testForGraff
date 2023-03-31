@@ -15,7 +15,7 @@ const FiltersBlock = () => {
           type="text"
           className="name"
           defaultValue={searchTitle}
-          onChange={(event) => setSearchTitle(event.target.value.toLowerCase())}
+          onChange={(event) => setSearchTitle(event.target.value)}
         />
       </div>
       <div className="brands-filter_container">
