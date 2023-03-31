@@ -5,12 +5,15 @@ import { BRANDS } from "../../_constants";
 import BrandsFilter from "../BrandOption/BrandOption";
 import CategoriesSelect from "../CategoriesSelect/CategoriesSelect";
 
+import "./FiltersBlock.scss";
+
 const FiltersBlock = () => {
   const { searchTitle, searchBrand, setSearchBrand, setSearchTitle } =
     useFilter();
 
   return (
-    <div className="filters">
+    <aside className="filters">
+      <h3 className="title">Filters</h3>
       <div className="search_container">
         <input
           placeholder="Search by title..."
@@ -42,7 +45,7 @@ const FiltersBlock = () => {
         </fieldset>
       </div>
       <CategoriesSelect />
-    </div>
+    </aside>
   );
 };
 
