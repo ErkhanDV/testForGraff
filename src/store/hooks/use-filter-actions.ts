@@ -18,6 +18,9 @@ export const useFilter = () => {
   const setSearchBrand = (searchBrand: string) => {
     dispatch(filterSlice.setSearchBrand(searchBrand));
   };
+  const removeSearchCategory = (searchBrand: string) => {
+    dispatch(filterSlice.removeSearchCategory(searchBrand));
+  };
 
   return {
     searchTitle,
@@ -26,5 +29,6 @@ export const useFilter = () => {
     setSearchTitle,
     setSearchCategory,
     setSearchBrand,
+    removeSearchCategory,
   };
 };

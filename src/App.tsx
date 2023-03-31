@@ -7,7 +7,7 @@ import AppRouter from "./router/AppRouter";
 
 import { PRODUCTS_LIST } from "./pages/Home/_constants";
 
-import { IProducts } from "./types/types";
+import { TProduct } from "./store/reducers/types";
 
 import "./App.scss";
 
@@ -18,17 +18,18 @@ const App = () => {
   useEffect(() => {
     (async () => {
       const respounse = await fetch(PRODUCTS_LIST);
-      const products: IProducts = await respounse.json();
-      const productList = products.products;
+      const products: TProduct[] = await respounse.json();
 
       setProductList(
-        productList.filter(
+        products.filter(
           (product) =>
-            product.title.toLowerCase().includes(searchTitle) &&
-            searchCategory.every((category) =>
-              product.category.toLowerCase().includes(category)
-            ) &&
-            product.brand.toLowerCase().includes(searchBrand)
+            product.title.toLowerCase().includes(searchTitle.toLowerCase()) &&
+            product.brand.toLowerCase().includes(searchBrand) &&
+            (searchCategory.length
+              ? searchCategory.some(
+                  (category) => product.category.toLowerCase() === category
+                )
+              : true)
         )
       );
     })();

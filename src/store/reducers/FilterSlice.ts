@@ -15,16 +15,25 @@ const filterSlice = createSlice({
     setSearchTitle(state, action: PayloadAction<string>) {
       state.title = action.payload;
     },
+    setSearchBrand(state, action: PayloadAction<string>) {
+      state.brand = action.payload;
+    },
     setSearchCategory(state, action: PayloadAction<string>) {
       state.category.push(action.payload);
     },
-    setSearchBrand(state, action: PayloadAction<string>) {
-      state.brand = action.payload;
+    removeSearchCategory(state, action: PayloadAction<string>) {
+      state.category = state.category.filter(
+        (category) => category !== action.payload
+      );
     },
   },
 });
 
-export const { setSearchTitle, setSearchCategory, setSearchBrand } =
-  filterSlice.actions;
+export const {
+  setSearchTitle,
+  setSearchBrand,
+  setSearchCategory,
+  removeSearchCategory,
+} = filterSlice.actions;
 
 export default filterSlice.reducer;

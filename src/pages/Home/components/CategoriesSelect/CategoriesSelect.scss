@@ -1,0 +1,26 @@
+.multiple-select {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.select-boxes {
+  position: relative;
+  width: 100%;
+}
+
+.select-btn {
+  width: 100%;
+}
+
+.checkBoxes {
+  display: none;
+  border: 1px #8df5e4 solid;
+}
+.visible {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
