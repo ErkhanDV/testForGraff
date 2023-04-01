@@ -14,6 +14,7 @@ const ProductList = () => {
   return (
     <section className="products-section">
       <h1 className="page-title">Products</h1>
+      <button className="filters-button">Filters</button>
       <nav className="product-list">
         <ul className="products">
           {productList

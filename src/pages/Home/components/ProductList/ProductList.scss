@@ -2,3 +2,34 @@
   padding: 2rem;
   flex-grow: 1;
 }
+.filters-button {
+  position: relative;
+  margin-left: 30px;
+  padding: 0;
+  display: none;
+  border: none;
+  background: none;
+  color: #f2f2f2;
+  &:hover {
+    cursor: pointer;
+  }
+  &::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    left: -30px;
+    position: absolute;
+    background: url("../../../../assets/icons/filter-icon.svg") no-repeat center
+      left;
+  }
+}
+
+@media (max-width: 750px) {
+  .products-section {
+    padding: 1rem;
+  }
+  .filters-button {
+    display: flex;
+    align-items: center;
+  }
+}

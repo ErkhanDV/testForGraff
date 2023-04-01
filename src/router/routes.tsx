@@ -12,7 +12,6 @@ const routes: IRoute[] = [
   {
     path: ROUTE.product,
     element: <Product />,
-    errorElement: <NotFound />,
   },
   {
     path: "*",

@@ -59,3 +59,21 @@
     }
   }
 }
+
+@media (max-width: 750px) {
+  .page-title {
+    margin: 0px;
+    font-size: 2rem;
+  }
+  .product-card {
+    .title {
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media (max-width: 420px) {
+  .product-card .attributes .container {
+    width: 200px;
+  }
+}
