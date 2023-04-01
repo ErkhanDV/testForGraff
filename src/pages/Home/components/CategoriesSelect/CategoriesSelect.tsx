@@ -12,19 +12,23 @@ const CategoriesSelect = () => {
   const { searchCategory } = useFilter();
 
   const [isVisible, setVisible] = useState<boolean>(false);
+  const visibleHandler = () => setVisible(!isVisible);
 
   return (
     <div className="multiple-select">
-      <h3>Categories</h3>
+      <p className="categories-title">Categories:</p>
       <div className="select-boxes">
-        <button className="select-btn" onClick={() => setVisible(!isVisible)}>
+        <button
+          className={`categories-btn${isVisible ? " active" : ""}`}
+          onClick={visibleHandler}
+        >
           {!searchCategory.length ? "Any" : `Choosed: ${searchCategory.length}`}
         </button>
-        <div className={isVisible ? "visible checkBoxes" : "checkBoxes"}>
+        <ul className={`checkBoxes${isVisible ? " visible" : ""}`}>
           {CATEGORIES.map((category, index) => (
             <CategoryCheckbox category={category} key={index} />
           ))}
-        </div>
+        </ul>
       </div>
     </div>
   );

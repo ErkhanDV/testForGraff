@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
+
 import { useFilter } from "../../../../../store/hooks/use-filter-actions";
+
+import "./CategoryCheckbox.scss";
 
 const CategoryCheckbox = ({ category }: { category: string }) => {
   const { searchCategory, setSearchCategory, removeSearchCategory } =
@@ -19,15 +22,18 @@ const CategoryCheckbox = ({ category }: { category: string }) => {
   }, [searchCategory]);
 
   return (
-    <label htmlFor="first">
-      <input
-        type="checkbox"
-        id={category}
-        onChange={changeHandler}
-        checked={isChecked}
-      />
-      {category}
-    </label>
+    <li className="category-element">
+      <label htmlFor={category}>
+        <input
+          className="checkbox"
+          type="checkbox"
+          id={category}
+          onChange={changeHandler}
+          checked={isChecked}
+        />
+        {category}
+      </label>
+    </li>
   );
 };
 

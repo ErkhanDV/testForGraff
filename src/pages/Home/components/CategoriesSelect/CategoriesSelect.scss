@@ -2,7 +2,7 @@
   width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
 }
 
@@ -17,10 +17,54 @@
 
 .checkBoxes {
   display: none;
-  border: 1px #8df5e4 solid;
+  background-color: #393c46;
+  border-radius: 4px;
 }
 .visible {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+}
+
+.categories-title {
+  margin: 0;
+}
+
+.categories-btn {
+  position: relative;
+  width: 100%;
+  height: 48px;
+  margin-top: 10px;
+  padding: 12px;
+  text-align: left;
+  border-radius: 4px;
+  background-color: #393c46;
+  color: #f2f2f2;
+
+  &:hover {
+    cursor: pointer;
+    border-image-source: linear-gradient(#bc75ff, #798fff);
+    border-width: 1pt;
+    border-image-slice: 2;
+    outline: none;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    right: 16px;
+    transform: translate(0, -50%);
+    transform: rotateX(0deg);
+    background-image: url("../../../../assets/icons/down-icon.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: all ease 0.3s;
+  }
+}
+
+.active {
+  &::after {
+    transform: rotateX(180deg);
+  }
 }
