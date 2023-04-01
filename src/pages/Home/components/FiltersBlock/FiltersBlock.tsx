@@ -5,23 +5,26 @@ import { BRANDS } from "../../_constants";
 import BrandsFilter from "../BrandOption/BrandOption";
 import CategoriesSelect from "../CategoriesSelect/CategoriesSelect";
 
+import "./FiltersBlock.scss";
+
 const FiltersBlock = () => {
   const { searchTitle, searchBrand, setSearchBrand, setSearchTitle } =
     useFilter();
 
   return (
-    <div className="filters">
-      <div className="search_container">
+    <aside className="filters">
+      <h3 className="title">Filters</h3>
+      <div className="search-container">
         <input
           placeholder="Search by title..."
           type="text"
-          className="name"
+          className="input-search"
           defaultValue={searchTitle}
           onChange={(event) => setSearchTitle(event.target.value)}
         />
       </div>
       <div className="brands-filter_container">
-        <fieldset>
+        <fieldset className="brands-list">
           Choose a brand:
           <div className="brand-option">
             <input
@@ -42,7 +45,7 @@ const FiltersBlock = () => {
         </fieldset>
       </div>
       <CategoriesSelect />
-    </div>
+    </aside>
   );
 };
 

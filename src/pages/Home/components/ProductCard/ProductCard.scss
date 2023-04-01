@@ -1,0 +1,46 @@
+.product-card {
+  position: relative;
+  width: 90%;
+  margin: 1rem 0;
+  padding: 2rem;
+  border-radius: 8px;
+  background-color: #22242a;
+  transition: background-color ease 0.3s;
+  .title {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .attributes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 16px;
+    .container {
+      width: 300px;
+      display: flex;
+      gap: 6px;
+      .attribute-name {
+        font-size: 16px;
+        color: #818798;
+      }
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    right: 38px;
+    top: 50%;
+    transform: translate(0, -50%);
+    background-image: url("../../../../assets/icons/arrow-right.svg");
+    opacity: 0;
+    transition: opacity ease 0.3s;
+  }
+  &:hover {
+    background-color: #393c46;
+    &::after {
+      opacity: 1;
+    }
+  }
+}
