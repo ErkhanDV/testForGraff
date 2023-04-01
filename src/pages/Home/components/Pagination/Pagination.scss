@@ -17,9 +17,7 @@
   border: none;
   background-color: #22242a;
   background: url("../../../../assets/icons/down-icon.svg") no-repeat center;
-  &:hover {
-    cursor: pointer;
-  }
+  opacity: 0;
   transition: all ease 0.3s;
 }
 
@@ -40,5 +38,12 @@
 .right.active {
   &:hover {
     transform: rotateZ(270deg) translateY(5px);
+  }
+}
+
+.active {
+  opacity: 1;
+  &:hover {
+    cursor: pointer;
   }
 }

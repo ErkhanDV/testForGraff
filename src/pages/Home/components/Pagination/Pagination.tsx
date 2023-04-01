@@ -12,16 +12,16 @@ const Pagination = ({
   setPage: React.Dispatch<React.SetStateAction<number>>;
 }) => {
   const { productList } = useProductList();
-  const isNextBtnActive = () => productList.length > page * 5;
-  const isPrevBtnActive = () => page > 1;
+  const isNextBtnActive = productList.length > page * 5;
+  const isPrevBtnActive = page > 1;
 
   const pageIncrement = () => {
-    if (isNextBtnActive()) {
+    if (isNextBtnActive) {
       setPage(page + 1);
     }
   };
   const pageDecrement = () => {
-    if (isPrevBtnActive()) {
+    if (isPrevBtnActive) {
       setPage(page - 1);
     }
   };
@@ -33,14 +33,14 @@ const Pagination = ({
   return (
     <div className="pagination-container">
       <button
-        className={`button left ${isPrevBtnActive() ? " active" : ""}`}
+        className={`button left ${isPrevBtnActive ? " active" : ""}`}
         onClick={pageDecrement}
-      ></button>
+      />
       <span className="page-number">{page}</span>
       <button
-        className={`button right ${isNextBtnActive() ? " active" : ""}`}
+        className={`button right ${isNextBtnActive ? " active" : ""}`}
         onClick={pageIncrement}
-      ></button>
+      />
     </div>
   );
 };

@@ -17,21 +17,25 @@ const App = () => {
 
   useEffect(() => {
     (async () => {
-      const respounse = await fetch(PRODUCTS_LIST);
-      const products: TProduct[] = await respounse.json();
+      try {
+        const respounse = await fetch(PRODUCTS_LIST);
+        const products: TProduct[] = await respounse.json();
 
-      setProductList(
-        products.filter(
-          (product) =>
-            product.title.toLowerCase().includes(searchTitle.toLowerCase()) &&
-            product.brand.toLowerCase().includes(searchBrand) &&
-            (searchCategory.length
-              ? searchCategory.some(
-                  (category) => product.category.toLowerCase() === category
-                )
-              : true)
-        )
-      );
+        setProductList(
+          products.filter(
+            (product) =>
+              product.title.toLowerCase().includes(searchTitle.toLowerCase()) &&
+              product.brand.toLowerCase().includes(searchBrand) &&
+              (searchCategory.length
+                ? searchCategory.some(
+                    (category) => product.category.toLowerCase() === category
+                  )
+                : true)
+          )
+        );
+      } catch (error) {
+        throw new Error("Can't find products");
+      }
     })();
   }, [searchTitle, searchCategory, searchBrand]);
 
