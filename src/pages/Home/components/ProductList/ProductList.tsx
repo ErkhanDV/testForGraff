@@ -13,7 +13,7 @@ const ProductList = () => {
 
   return (
     <section className="products-section">
-      <h1 className="title">Products</h1>
+      <h1 className="page-title">Products</h1>
       <nav className="product-list">
         <ul className="products">
           {productList
