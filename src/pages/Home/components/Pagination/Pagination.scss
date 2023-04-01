@@ -1,0 +1,44 @@
+.pagination-container {
+  display: flex;
+  align-items: center;
+  width: 100px;
+}
+
+.page-number {
+  font-size: 18px;
+  user-select: none;
+}
+
+.button {
+  width: 24px;
+  height: 24px;
+  margin: 10px;
+  padding: 0;
+  border: none;
+  background-color: #22242a;
+  background: url("../../../../assets/icons/down-icon.svg") no-repeat center;
+  &:hover {
+    cursor: pointer;
+  }
+  transition: all ease 0.3s;
+}
+
+.left {
+  transform: rotateZ(90deg);
+}
+
+.left.active {
+  &:hover {
+    transform: rotateZ(90deg) translateY(5px);
+  }
+}
+
+.right {
+  transform: rotateZ(270deg);
+}
+
+.right.active {
+  &:hover {
+    transform: rotateZ(270deg) translateY(5px);
+  }
+}
