@@ -23,9 +23,9 @@ const FiltersBlock = () => {
           onChange={(event) => setSearchTitle(event.target.value)}
         />
       </div>
+      <span className="brand">Choose a brand:</span>
       <div className="brands-filter_container">
         <fieldset className="brands-list">
-          Choose a brand:
           <div className="brand-option">
             <input
               type="radio"

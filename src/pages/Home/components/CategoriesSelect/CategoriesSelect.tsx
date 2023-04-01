@@ -24,11 +24,13 @@ const CategoriesSelect = () => {
         >
           {!searchCategory.length ? "Any" : `Choosed: ${searchCategory.length}`}
         </button>
-        <ul className={`checkBoxes${isVisible ? " visible" : ""}`}>
-          {CATEGORIES.map((category, index) => (
-            <CategoryCheckbox category={category} key={index} />
-          ))}
-        </ul>
+        {isVisible && (
+          <ul className="checkBoxes">
+            {CATEGORIES.map((category, index) => (
+              <CategoryCheckbox category={category} key={index} />
+            ))}
+          </ul>
+        )}
       </div>
     </div>
   );
