@@ -19,6 +19,7 @@
   background-color: #393c46;
   border-radius: 4px;
   margin-bottom: 10px;
+  padding: 5px 0;
 }
 
 .categories-title {
@@ -62,4 +63,25 @@
   &::after {
     transform: rotateX(180deg);
   }
+}
+
+@keyframes categories-animation {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+.categories-open-animation {
+  animation-duration: 0.3s;
+  animation-name: categories-animation;
+}
+
+.categories-close-animation {
+  animation-duration: 0.3s;
+  animation-name: categories-animation;
+  animation-direction: reverse;
 }

@@ -23,7 +23,7 @@ const CategoryCheckbox = ({ category }: { category: string }) => {
 
   return (
     <li className="category-element">
-      <label htmlFor={category}>
+      <label htmlFor={category} className="checkbox-container">
         <input
           className="checkbox"
           type="checkbox"
@@ -32,6 +32,7 @@ const CategoryCheckbox = ({ category }: { category: string }) => {
           checked={isChecked}
         />
         {category}
+        <span className="checkmark"></span>
       </label>
     </li>
   );
