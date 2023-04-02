@@ -1,11 +1,10 @@
-import { useParams } from "react-router-dom";
+import "./NotFound.scss";
 
 const NotFound = () => {
-  const { id } = useParams();
-  console.log(id);
   return (
     <div className="not-found">
-      <h1>NON</h1>
+      <h1>We don't have this page</h1>
+      <div className="description">Please, try later</div>
     </div>
   );
 };
