@@ -13,8 +13,10 @@ export const getProduct = createAsyncThunk<void, string>(
       if (!response) {
         throw new Error();
       }
-      const product: TProduct = await response.json();
-      thunkAPI.dispatch(getCurrentProduct(product));
+      const product = await response.json();
+      thunkAPI.dispatch(
+        getCurrentProduct(typeof product === "string" ? null : product)
+      );
     } catch (error) {
       throw new Error("Can't find products");
     }

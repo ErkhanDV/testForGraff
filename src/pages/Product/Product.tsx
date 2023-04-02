@@ -22,7 +22,12 @@ const Product = () => {
   }, []);
 
   if (!product) {
-    return <h2>Not product</h2>;
+    return (
+      <div className="not-product">
+        <BackLink />
+        <h2>We don't have this product, try later</h2>
+      </div>
+    );
   }
 
   return (
@@ -37,7 +42,7 @@ const Product = () => {
           </h2>
           <p className="card_discription">
             <span className="card_discription__value">
-              {product.description}
+              {product?.description}
             </span>
           </p>
           <p className="card_info">
