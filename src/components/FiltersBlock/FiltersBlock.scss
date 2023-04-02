@@ -28,6 +28,9 @@
       border-image-slice: 2;
       outline: none;
     }
+    &::placeholder {
+      letter-spacing: 1px;
+    }
   }
 }
 
@@ -38,6 +41,10 @@
 }
 .brand-option {
   margin: 10px 0;
+  transition: all ease 0.3s;
+  &:hover {
+    color: #818698;
+  }
 }
 
 .brand-option {

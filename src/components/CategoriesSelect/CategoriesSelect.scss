@@ -9,6 +9,9 @@
 .select-boxes {
   position: relative;
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .select-btn {
@@ -20,13 +23,15 @@
   border-radius: 4px;
   margin-bottom: 10px;
   padding: 5px 0;
+  align-self: normal;
 }
 
 .categories-title {
-  margin: 0;
+  margin-bottom: 5px;
 }
 
 .btn-wrapper {
+  width: calc(100% + 4px);
   border-radius: 4px;
   height: 48px;
   display: flex;
@@ -68,6 +73,13 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: all ease 0.3s;
+  }
+}
+
+.category-element {
+  transition: all ease 0.3s;
+  &:hover {
+    color: #818798;
   }
 }
 
