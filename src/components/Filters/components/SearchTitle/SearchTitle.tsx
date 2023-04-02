@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
-import { useDebounce } from "../../../../../../hooks/useDebounce";
-import { useFilter } from "../../../../../../store/hooks/use-filter-actions";
+import { useDebounce } from "../../../../hooks/useDebounce";
+import { useFilter } from "../../../../store/hooks/use-filter-actions";
 
 import "../../Filters.scss";
 

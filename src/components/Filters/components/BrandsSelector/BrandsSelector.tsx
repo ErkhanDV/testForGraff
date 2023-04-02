@@ -1,10 +1,10 @@
 import React from "react";
 
-import { useFilter } from "../../../../../../store/hooks/use-filter-actions";
+import { useFilter } from "../../../../store/hooks/use-filter-actions";
 
 import BrandsFilter from "../../../BrandOption/BrandOption";
 
-import { BRANDS } from "../../../../_constants";
+import { BRANDS } from "../../../../pages/Home/_constants";
 
 import "../../Filters.scss";
 

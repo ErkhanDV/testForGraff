@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-import { useProductList } from "../../../../store/hooks/use-store-actions";
+import { useProductList } from "../../store/hooks/use-store-actions";
 
 import "./Pagination.scss";
 

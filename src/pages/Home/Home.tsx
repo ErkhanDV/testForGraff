@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 
-import FiltersBlock from "./components/FiltersBlock/FiltersBlock";
-import ProductList from "./components/ProductList/ProductList";
+import ProductList from "../../components/ProductList/ProductList";
+import FiltersBlock from "../../components/FiltersBlock/FiltersBlock";
 
 import { getAllProducts } from "../../store/services/getAllProducts";
 import { useFilter } from "../../store/hooks/use-filter-actions";

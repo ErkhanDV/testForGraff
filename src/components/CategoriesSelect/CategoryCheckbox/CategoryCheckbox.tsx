@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-import { useFilter } from "../../../../../store/hooks/use-filter-actions";
+import { useFilter } from "../../../store/hooks/use-filter-actions";
 
 import "./CategoryCheckbox.scss";
 

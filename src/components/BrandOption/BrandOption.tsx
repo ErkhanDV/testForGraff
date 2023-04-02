@@ -1,4 +1,4 @@
-import { useFilter } from "../../../../store/hooks/use-filter-actions";
+import { useFilter } from "../../store/hooks/use-filter-actions";
 
 import "./BrandOption.scss";
 

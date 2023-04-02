@@ -1,4 +1,4 @@
-import useWindowDimensions from "../../../../hooks/useWindowDimension";
+import useWindowDimensions from "../../hooks/useWindowDimension";
 
 import Filters from "../Filters/Filters";
 

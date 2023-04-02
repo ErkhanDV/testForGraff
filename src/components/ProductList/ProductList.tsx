@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 
 import ProductCard from "../ProductCard/ProductCard";
 import Pagination from "../Pagination/Pagination";
-import Modal from "../../../../components/Modal/Modal";
+import Modal from "../Modal/Modal";
 import Filters from "../Filters/Filters";
 
-import { useProductList } from "../../../../store/hooks/use-store-actions";
-import useWindowDimensions from "../../../../hooks/useWindowDimension";
+import { useProductList } from "../../store/hooks/use-store-actions";
+import useWindowDimensions from "../../hooks/useWindowDimension";
 
 import "./ProductList.scss";
 
