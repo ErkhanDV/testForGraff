@@ -1,0 +1,26 @@
+input[type="radio"] {
+  appearance: none;
+  margin: 0;
+  font: inherit;
+  color: currentColor;
+  width: 0.8em;
+  height: 0.8em;
+  border: 0.15em solid #393c46;
+  border-radius: 50%;
+  transform: translateY(-0.075em);
+}
+
+input[type="radio"]::before {
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: transform ease 0.1s;
+  box-shadow: inset 1em 1em #f2f2f2;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1);
+}

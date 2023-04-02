@@ -1,11 +1,14 @@
 import { useFilter } from "../../../../store/hooks/use-filter-actions";
 
+import "./BrandOption.scss";
+
 const BrandsFilter = ({ brand }: { brand: string }) => {
   const { searchBrand, setSearchBrand } = useFilter();
 
   return (
     <div className="brand-option">
       <input
+        className="custom-radio"
         type="radio"
         id={brand}
         name="brands"
