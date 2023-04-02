@@ -18,12 +18,16 @@ const CategoriesSelect = () => {
     <div className="multiple-select">
       <p className="categories-title">Categories:</p>
       <div className="select-boxes">
-        <button
-          className={`categories-btn${isVisible ? " active" : ""}`}
-          onClick={visibleHandler}
-        >
-          {!searchCategory.length ? "Any" : `Choosed: ${searchCategory.length}`}
-        </button>
+        <div className="btn-wrapper">
+          <button
+            className={`categories-btn${isVisible ? " active" : ""}`}
+            onClick={visibleHandler}
+          >
+            {!searchCategory.length
+              ? "Any"
+              : `Choosed: ${searchCategory.length}`}
+          </button>
+        </div>
         {isVisible && (
           <ul
             className={`checkBoxes ${

@@ -1,0 +1,21 @@
+.back-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  padding: 20px;
+  font-size: 16px;
+  &::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    left: -5px;
+    position: absolute;
+    background: url("../../assets/icons/arrow-right.svg") no-repeat center;
+    transform: rotateY(180deg);
+    transition: all ease 0.3s;
+  }
+  &:hover::before {
+    left: -10px;
+  }
+}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import ProductCard from "../ProductCard/ProductCard";
 import Pagination from "../Pagination/Pagination";
-import Modal from "../Modal/Modal";
+import Modal from "../../../../components/Modal/Modal";
 import Filters from "../Filters/Filters";
 
 import { useProductList } from "../../../../store/hooks/use-store-actions";
@@ -17,11 +17,16 @@ const ProductList = () => {
   const [modalActive, setModalActive] = useState<boolean>(false);
   const { width } = useWindowDimensions();
 
+  const isMobile = width < 750;
+
+  const onClose = () => setModalActive(false);
+  const onOpen = () => setModalActive(true);
+
   return (
     <section className="products-section">
       <h1 className="page-title">Products</h1>
-      {width < 750 && (
-        <button className="filters-button" onClick={() => setModalActive(true)}>
+      {isMobile && (
+        <button className="filters-button" onClick={onOpen}>
           Filters
         </button>
       )}
@@ -37,18 +42,14 @@ const ProductList = () => {
         </ul>
       </nav>
       <Pagination page={page} setPage={setPage} />
-      <Modal active={modalActive}>
-        <>
-          <Link
-            to="/"
-            className="back-link"
-            onClick={() => setModalActive(false)}
-          >
+      {isMobile && (
+        <Modal isOpen={modalActive} onClose={onClose} lazy>
+          <Link to="/" className="back-link" onClick={onClose}>
             Back to products
           </Link>
           <Filters />
-        </>
-      </Modal>
+        </Modal>
+      )}
     </section>
   );
 };

@@ -15,6 +15,10 @@ export interface IProductsStore {
   products: TProduct[];
 }
 
+export interface IProduct {
+  product: TProduct | null;
+}
+
 export interface IFilter {
   title: string;
   category: string[];

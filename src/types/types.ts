@@ -6,3 +6,9 @@ export interface IProducts {
   skip: number;
   total: number;
 }
+
+export interface IFilters {
+  searchTitle: string;
+  searchCategory: string[];
+  searchBrand: string;
+}
