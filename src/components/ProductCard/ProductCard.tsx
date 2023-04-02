@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { TProduct } from "../../../../store/reducers/types";
+import { TProduct } from "../../store/reducers/types";
 
 import "./ProductCard.scss";
 
