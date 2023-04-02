@@ -1,9 +1,11 @@
 body {
   margin: 0;
   height: 100%;
+  user-select: none;
+  letter-spacing: 1px;
 }
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
