@@ -1,52 +1,21 @@
-import { useFilter } from "../../../../store/hooks/use-filter-actions";
+import useWindowDimensions from "../../../../hooks/useWindowDimension";
 
-import { BRANDS } from "../../_constants";
-
-import BrandsFilter from "../BrandOption/BrandOption";
-import CategoriesSelect from "../CategoriesSelect/CategoriesSelect";
+import Filters from "../Filters/Filters";
 
 import "./FiltersBlock.scss";
 
 const FiltersBlock = () => {
-  const { searchTitle, searchBrand, setSearchBrand, setSearchTitle } =
-    useFilter();
+  const { width } = useWindowDimensions();
 
-  return (
-    <aside className="filters">
-      <h3 className="title">Filters</h3>
-      <div className="search-container">
-        <input
-          placeholder="Search by title..."
-          type="text"
-          className="input-search"
-          defaultValue={searchTitle}
-          onChange={(event) => setSearchTitle(event.target.value)}
-        />
-      </div>
-      <span className="brand">Choose a brand:</span>
-      <div className="brands-filter_container">
-        <fieldset className="brands-list">
-          <div className="brand-option">
-            <input
-              type="radio"
-              id="any"
-              name="brands"
-              value=""
-              onChange={(event) =>
-                setSearchBrand(event.target.value.toLowerCase())
-              }
-              checked={!searchBrand}
-            />
-            <label htmlFor="any">Any</label>
-          </div>
-          {BRANDS.map((brand, index) => (
-            <BrandsFilter brand={brand} key={index} />
-          ))}
-        </fieldset>
-      </div>
-      <CategoriesSelect />
-    </aside>
-  );
+  if (width >= 750) {
+    return (
+      <aside className="filters">
+        <h3 className="title">Filters</h3>
+        <Filters />
+      </aside>
+    );
+  }
+  return null;
 };
 
 export default FiltersBlock;

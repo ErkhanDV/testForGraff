@@ -33,12 +33,12 @@ const Pagination = ({
   return (
     <div className="pagination-container">
       <button
-        className={`button left ${isPrevBtnActive ? " active" : ""}`}
+        className={`button left${isPrevBtnActive ? " active" : ""}`}
         onClick={pageDecrement}
       />
       <span className="page-number">{page}</span>
       <button
-        className={`button right ${isNextBtnActive ? " active" : ""}`}
+        className={`button right${isNextBtnActive ? " active" : ""}`}
         onClick={pageIncrement}
       />
     </div>
